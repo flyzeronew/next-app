@@ -8,17 +8,17 @@ function Home() {
     <ul>
       <li>
         <Link href="/">
-          <a>Home</a>
+          <a>Home1</a>
         </Link>
       </li>
       <li>
         <Link href="/about">
-          <a>About Us</a>
+          <a>About Us1</a>
         </Link>
       </li>
       <li>
         <Link href="/blog/hello-world">
-          <a>Blog Post</a>
+          <a>Blog Post1</a>
         </Link>
       </li>
     </ul>
