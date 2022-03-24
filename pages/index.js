@@ -8,17 +8,17 @@ function Home() {
     <ul>
       <li>
         <Link href="/">
-          <a>Home1</a>
+          <a>Home 更新惹</a>
         </Link>
       </li>
       <li>
         <Link href="/about">
-          <a>About Us1</a>
+          <a>About Us 更新惹</a>
         </Link>
       </li>
       <li>
         <Link href="/blog/hello-world">
-          <a>Blog Post1</a>
+          <a>Blog Post 更新惹</a>
         </Link>
       </li>
     </ul>
