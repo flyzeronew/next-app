@@ -1,27 +1,25 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
 
-function Home() {
-  return (
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home 更新惹</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>About Us 更新惹</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/blog/hello-world">
-          <a>Blog Post 更新惹</a>
-        </Link>
-      </li>
-    </ul>
-  )
+interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }
-export default Home
+
+export default function Home() {
+  const [post, setPost] = useState<Post>();
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then((res) => res.json())
+      .then((res) => setPost(res));
+  }, []);
+
+  return (
+    <div>
+      <h1>{post?.title}</h1>
+      <p>{post?.body}</p>
+    </div>
+  );
+}
